@@ -1,6 +1,6 @@
-# Gravita — Visual Storytelling & Copy Audit (v5)
+# I-Vision — Visual Storytelling & Copy Audit (v6)
 ### Senior Art Direction, UX, and Copy Review
-*Date: 2026-09-29 | Status: ALL APPROVED CHANGES IMPLEMENTED*
+*Date: 2026-10-11 | Status: REBRANDED TO I-VISION WITH BOXING FONT*
 
 ---
 
@@ -8,6 +8,8 @@
 
 | Change | Status |
 |---|---|
+| Rebrand Gravita → I-Vision | ✅ IMPLEMENTED |
+| Brand typeface → Boxing | ✅ IMPLEMENTED |
 | ShopBySilhouette h3 → "Start with a shape." | ✅ IMPLEMENTED |
 | ShopBySilhouette subhead → "Explore rectangular, round, cat-eye, and aviator frames." | ✅ IMPLEMENTED |
 | Eyeglasses collection h2 → "Explore eyeglasses." | ✅ IMPLEMENTED |
@@ -35,7 +37,7 @@ This table reflects exactly what is rendered in the codebase as of this update.
 | ShopBySilhouette subhead | `ShopBySilhouette.tsx` | "Explore rectangular, round, cat-eye, and aviator frames." |
 | EditorialPanel kicker | `EditorialPanel.tsx` | "Our Point of View" ← no approved change |
 | EditorialPanel h3 | `EditorialPanel.tsx` | "Designed for the way you look at the world." ← no approved change |
-| EditorialPanel body | `EditorialPanel.tsx` | "Gravita brings considered forms and everyday clarity into focus…" ← no approved change |
+| EditorialPanel body | `EditorialPanel.tsx` | "I-Vision brings considered forms and everyday clarity into focus…" ← updated |
 | GuidedSelection h3 | `GuidedSelection.tsx` | "Find the frame that feels like you." |
 | GuidedSelection subtitle | `GuidedSelection.tsx` | "Start with shape, fit, or everyday style." |
 | Eyeglasses collection h1 (kicker) | `eyeglasses/page.tsx` | "Eyeglasses" |
@@ -47,7 +49,7 @@ This table reflects exactly what is rendered in the codebase as of this update.
 | Find Your Frame h2 | `find-your-frame/page.tsx` | "Start with what feels right." |
 | Find Your Frame subhead | `find-your-frame/page.tsx` | "Choose a starting point and explore frames at your own pace." |
 | About h1 | `about/page.tsx` | "A clearer way to see what matters." ← deferred |
-| About body | `about/page.tsx` | "Gravita is built around a simple idea: eyewear should feel considered, personal, and easy to live with." ← deferred |
+| About body | `about/page.tsx` | "I-Vision is built around a simple idea: eyewear should feel considered, personal, and easy to live with." ← updated |
 | Footer close | `Footer.tsx` | "See things differently." — intentional hero/footer pairing |
 
 ---
@@ -108,7 +110,7 @@ The site has been actively transitioned away from an e-commerce functionality to
 
 | Role | Current | Prototype OK? | Launch requirement |
 |---|---|---|---|
-| Campaign portrait (Hero, EditorialPanel) | AI-generated | ✅ Prototype only | Rights-cleared; shows actual Gravita frames |
+| Campaign portrait (Hero, EditorialPanel) | AI-generated | ✅ Prototype only | Rights-cleared; shows actual I-Vision frames |
 | Silhouette tiles | AI-generated | ✅ Prototype only | Actual inventory photography |
 | Product listing | AI-generated | ✅ Prototype only | Exact-product photography, consistent setup |
 | Product detail (multi-view) | Single AI image | ✅ Prototype only | 4–5 views per physical frame |
@@ -118,7 +120,7 @@ The site has been actively transitioned away from an e-commerce functionality to
 
 ## D. Do Not Change List
 
-1. **GRΛVITΛ wordmark** — Jost, `tracking-[0.1em]`, `font-light`, lambda substitution.
+1. **I-VISION wordmark** — Boxing font, uppercase, `tracking-[0.18em]`.
 2. **"See things differently."** — Hero h1 and footer close. Intentional pairing. Do not duplicate elsewhere; do not retire.
 3. **Warm ivory / near-black palette** — No gradients.
 4. **Rectangular controls** — No rounded corners anywhere in the UI.
@@ -147,7 +149,7 @@ The site has been actively transitioned away from an e-commerce functionality to
 - [ ] Approved business story paragraph
 
 ### Imagery
-- [ ] Rights-cleared campaign portrait showing actual Gravita frames
+- [ ] Rights-cleared campaign portrait showing actual I-Vision frames
 - [ ] Product listing photography — all frames, consistent setup
 - [ ] Product detail multi-view — 4–5 views per physical frame
 - [ ] Silhouette tiles — one image per shape from actual inventory

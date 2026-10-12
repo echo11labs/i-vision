@@ -8,15 +8,27 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+declare global {
+  interface Window {
+    __lenis?: Lenis;
+  }
+}
+
 type MotionMainProps = {
   children: ReactNode;
 };
 
 export default function MotionMain({ children }: MotionMainProps) {
   const mainRef = useRef<HTMLElement>(null);
+  const lenisRef = useRef<Lenis | null>(null);
   const pathname = usePathname();
 
   useEffect(() => {
+    // Avoid browser restoring old scroll position on page transition
+    if (typeof window !== "undefined" && "scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+
     const lenis = new Lenis({
       autoRaf: true,
       smoothWheel: true,
@@ -26,93 +38,39 @@ export default function MotionMain({ children }: MotionMainProps) {
       respectReducedMotion: true,
     });
 
+    lenisRef.current = lenis;
+    if (typeof window !== "undefined") {
+      window.__lenis = lenis;
+    }
+
     const removeScrollListener = lenis.on("scroll", ScrollTrigger.update);
 
     return () => {
       removeScrollListener();
       lenis.destroy();
+      lenisRef.current = null;
+      if (typeof window !== "undefined" && window.__lenis === lenis) {
+        delete window.__lenis;
+      }
     };
   }, []);
 
+  // Immediately scroll to top on every route change
   useEffect(() => {
-    const root = mainRef.current;
-    const isHydrationSensitivePage =
-      pathname.startsWith("/eyeglasses") || pathname.startsWith("/find-your-frame");
-    if (
-      !root ||
-      isHydrationSensitivePage ||
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    ) {
-      return;
+    if (lenisRef.current) {
+      lenisRef.current.scrollTo(0, { immediate: true });
     }
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }, [pathname]);
 
-    let refreshId: number | undefined;
-    const context = gsap.context(() => {
-      const headline = Array.from(root.querySelectorAll<HTMLElement>("h1")).find(
-        (element) => !element.closest("[data-custom-motion]")
-      );
-      const sections = Array.from(root.querySelectorAll<HTMLElement>("section, [data-motion-section]"))
-        .filter(
-          (section) =>
-            !section.closest("[data-custom-motion]") &&
-            (!headline || !section.contains(headline))
-        );
-      const media = Array.from(root.querySelectorAll<HTMLElement>("[data-motion-media]"))
-        .filter((element) => !element.closest("[data-custom-motion]"));
-
-      if (headline) {
-        gsap.fromTo(
-          headline,
-          { autoAlpha: 0, y: 20 },
-          { autoAlpha: 1, y: 0, duration: 0.8, ease: "power3.out", clearProps: "transform,opacity,visibility" }
-        );
-      }
-
-      sections.forEach((section) => {
-        gsap.fromTo(
-          section,
-          { autoAlpha: 0, y: 28 },
-          {
-            autoAlpha: 1,
-            y: 0,
-            duration: 0.85,
-            ease: "power3.out",
-            clearProps: "transform,opacity,visibility",
-            scrollTrigger: {
-              trigger: section,
-              start: "top 88%",
-              once: true,
-            },
-          }
-        );
-      });
-
-      media.forEach((element) => {
-        gsap.fromTo(
-          element,
-          { scale: 0.96, autoAlpha: 0.7 },
-          {
-            scale: 1,
-            autoAlpha: 1,
-            duration: 1.15,
-            ease: "power3.out",
-            clearProps: "transform,opacity,visibility",
-            scrollTrigger: {
-              trigger: element,
-              start: "top 84%",
-              once: true,
-            },
-          }
-        );
-      });
-
-      refreshId = window.requestAnimationFrame(() => ScrollTrigger.refresh());
-    }, root);
-
-    return () => {
-      if (refreshId !== undefined) window.cancelAnimationFrame(refreshId);
-      context.revert();
-    };
+  // Refresh scroll triggers when pathname changes
+  useEffect(() => {
+    const refreshId = window.requestAnimationFrame(() => {
+      ScrollTrigger.refresh();
+    });
+    return () => window.cancelAnimationFrame(refreshId);
   }, [pathname]);
 
   return (

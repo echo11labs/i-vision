@@ -1,6 +1,8 @@
 import Hero from "./Hero";
-import ShopBySilhouette from "./ShopBySilhouette";
+import EyeglassesShowcase from "./EyeglassesShowcase";
 import EditorialPanel from "./EditorialPanel";
+import TrustBand from "./TrustBand";
+import SunglassesShowcase from "./SunglassesShowcase";
 import CampaignSection from "./CampaignSection";
 import GuidedSelection from "./GuidedSelection";
 
@@ -8,10 +10,15 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <ShopBySilhouette />
+      <EyeglassesShowcase />
       <EditorialPanel />
+      <TrustBand />
+      <SunglassesShowcase />
       <CampaignSection />
       <GuidedSelection />
     </>
   );
 }
+
+
+

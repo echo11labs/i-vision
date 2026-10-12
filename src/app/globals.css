@@ -1,41 +1,108 @@
 @import "tailwindcss";
 @import "lenis/dist/lenis.css";
 
-@theme {
-  --color-background: #F4F1EB;
-  --color-foreground: #171917;
-  --color-accent: #68746B;
+/* ── Custom Brand Font: Boxing ── */
+@font-face {
+  font-family: 'Boxing';
+  src: url('/fonts/Boxing-Regular.woff2') format('woff2'),
+       url('/fonts/Boxing-Regular.woff') format('woff'),
+       url('/fonts/Boxing-Regular.ttf') format('truetype'),
+       url('/fonts/Boxing-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
+:root {
+  /* ── 1. Font Family Tokens ── */
+  --font-brand: 'Boxing', sans-serif;
   --font-sans: var(--font-jost), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-playfair), ui-serif, Georgia, serif;
-  --font-logo: var(--font-jost), ui-sans-serif, system-ui, sans-serif;
+  --font-logo: var(--font-brand);
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* ── 2. Fluid Typographic Sizing Tokens ── */
+  --text-brand-logo: clamp(1.125rem, 3vw, 2.25rem);
+  --text-hero: clamp(2.5rem, 7vw, 4.75rem);
+  --text-display-lg: clamp(2.25rem, 5vw, 3.75rem);
+  --text-display-md: clamp(1.75rem, 3.5vw, 2.5rem);
+  --text-display-sm: clamp(1.25rem, 2vw, 1.75rem);
+  --text-body-lg: 1.125rem;
+  --text-body: 1rem;
+  --text-caption: 0.875rem;
+  --text-kicker: 0.75rem;
+  --text-badge: 0.6875rem;
+  --text-micro: 0.5625rem;
+
+  /* ── 3. Letter-Spacing (Tracking) Tokens ── */
+  --tracking-brand: 0.18em;
+  --tracking-kicker: 0.2em;
+  --tracking-wide: 0.15em;
+  --tracking-caps: 0.1em;
+  --tracking-body: normal;
+  --tracking-snug: -0.01em;
+  --tracking-display: -0.03em;
+
+  /* ── 4. Line-Height Tokens ── */
+  --leading-none: 1;
+  --leading-tight: 1.05;
+  --leading-display: 1.1;
+  --leading-snug: 1.25;
+  --leading-relaxed: 1.6;
+
+  /* ── 5. Theme Colors ── */
+  --background: #F4F1EB;
+  --foreground: #171917;
+  --accent: #68746B;
+
+  /* ── 6. Layout Tokens ── */
+  --header-height: 4rem;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
+  --font-logo: var(--font-logo);
+  --font-brand: var(--font-brand);
+
+  --tracking-brand: var(--tracking-brand);
+  --tracking-kicker: var(--tracking-kicker);
+  --tracking-wide: var(--tracking-wide);
+  --tracking-caps: var(--tracking-caps);
+  --tracking-display: var(--tracking-display);
+  --tracking-snug: var(--tracking-snug);
+
+  --text-hero: var(--text-hero);
+  --text-display-lg: var(--text-display-lg);
+  --text-display-md: var(--text-display-md);
+  --text-display-sm: var(--text-display-sm);
+  --text-body-lg: var(--text-body-lg);
+  --text-body: var(--text-body);
+  --text-caption: var(--text-caption);
+  --text-kicker: var(--text-kicker);
+  --text-badge: var(--text-badge);
+  --text-micro: var(--text-micro);
+  --text-brand-logo: var(--text-brand-logo);
+
+  --leading-none: var(--leading-none);
+  --leading-tight: var(--leading-tight);
+  --leading-display: var(--leading-display);
+  --leading-snug: var(--leading-snug);
+  --leading-relaxed: var(--leading-relaxed);
 }
 
 @layer base {
-  :root {
-    --background: #F4F1EB;
-    --foreground: #171917;
-    --accent: #68746B;
-  }
-
   html {
     scroll-padding-top: 5rem;
+    scroll-behavior: auto;
   }
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
-  }
-
-  @media (prefers-reduced-motion: no-preference) {
-    html {
-      scroll-behavior: smooth;
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    html {
-      scroll-behavior: auto;
-    }
   }
 }
 
@@ -43,4 +110,115 @@
   .focus-ring {
     @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-background transition-all;
   }
+
+  /* ── Semantic Typography Utility Classes using CSS Variables ── */
+  .brand-logo {
+    font-family: var(--font-logo);
+    font-size: var(--text-brand-logo);
+    letter-spacing: var(--tracking-brand);
+    line-height: var(--leading-none);
+    font-weight: 400;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .brand-badge {
+    font-family: var(--font-sans);
+    font-size: var(--text-badge);
+    letter-spacing: var(--tracking-wide);
+    line-height: var(--leading-none);
+    text-transform: uppercase;
+  }
+
+  .section-kicker {
+    font-family: var(--font-sans);
+    font-size: var(--text-kicker);
+    letter-spacing: var(--tracking-kicker);
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .brand-numeral {
+    font-family: var(--font-brand);
+    letter-spacing: var(--tracking-caps);
+  }
+
+  .heading-hero {
+    font-family: var(--font-display);
+    font-size: var(--text-hero);
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-display);
+  }
+
+  .heading-display {
+    font-family: var(--font-display);
+    font-size: var(--text-display-lg);
+    line-height: var(--leading-display);
+    letter-spacing: var(--tracking-display);
+  }
+
+  .heading-sub {
+    font-family: var(--font-display);
+    font-size: var(--text-display-md);
+    line-height: var(--leading-snug);
+  }
+
+  /* ── Soft Landing Animation for Seamless Route Arrival ── */
+  @keyframes pageSoftLand {
+    0% {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .page-soft-land {
+    animation: pageSoftLand 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+    will-change: opacity, transform;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .page-soft-land {
+      animation: none;
+    }
+  }
+
+  /* ── Continuous Marquee for Brand Trust Band ── */
+  @keyframes marquee {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+
+  .animate-marquee {
+    display: flex;
+    width: max-content;
+    animation: marquee 38s linear infinite;
+    will-change: transform;
+  }
+
+  .animate-marquee:hover {
+    animation-play-state: paused;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-marquee {
+      animation: none;
+    }
+  }
 }
+
+/* Hide footer on 404 page */
+body:has(#not-found-screen) footer,
+body.is-not-found footer {
+  display: none !important;
+}
+
+
+

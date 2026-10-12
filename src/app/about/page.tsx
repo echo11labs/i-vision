@@ -4,8 +4,8 @@ import { ArrowRight } from "lucide-react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About | GRAVITA",
-  description: "Gravita is built around a simple idea: eyewear should feel considered, personal, and easy to live with.",
+  title: "About | I-VISION",
+  description: "I-Vision is built around a simple idea: eyewear should feel considered, personal, and easy to live with.",
 };
 
 const PRINCIPLES = [
@@ -36,14 +36,14 @@ export default function AboutPage() {
 
           {/* Text block */}
           <div className="max-w-3xl mb-16">
-            <span className="text-xs font-sans tracking-[0.18em] uppercase text-foreground/50 block mb-6">
-              Gravita, in practice
+            <span className="section-kicker text-foreground/50 block mb-6">
+              I-Vision, in practice
             </span>
-            <h1 className="font-display text-5xl sm:text-6xl lg:text-8xl tracking-[-0.05em] text-foreground leading-[0.96] mb-10">
+            <h1 className="font-display text-hero tracking-display text-foreground leading-tight mb-10">
               A clearer way to see what matters.
             </h1>
             <p className="font-sans text-xl sm:text-2xl text-foreground/80 leading-relaxed max-w-xl">
-              Gravita is built around a simple idea: eyewear should feel
+              I-Vision is built around a simple idea: eyewear should feel
               personal and easy to live with.
             </p>
           </div>
@@ -86,7 +86,7 @@ export default function AboutPage() {
             {/* Left label column */}
             <div className="col-span-4">
               <div className="sticky top-36">
-                <span className="text-xs font-sans tracking-[0.2em] uppercase text-foreground/50 block mb-6">
+                <span className="section-kicker text-foreground/50 block mb-6">
                   The way we choose
                 </span>
                 <h2 className="font-display text-4xl tracking-tight text-foreground leading-[1.1]">
@@ -113,7 +113,7 @@ export default function AboutPage() {
                   key={p.number}
                   className="flex items-baseline gap-12 py-10 border-b border-foreground/10"
                 >
-                  <span className="text-sm font-sans tracking-widest text-foreground/40 shrink-0 w-8">
+                  <span className="brand-numeral text-sm text-foreground/45 shrink-0 w-8">
                     {p.number}
                   </span>
                   <div className="flex flex-col sm:flex-row sm:items-baseline sm:gap-12 flex-1">
@@ -131,7 +131,7 @@ export default function AboutPage() {
 
           {/* Mobile: stacked */}
           <div className="lg:hidden pb-16">
-            <span className="text-xs font-sans tracking-[0.2em] uppercase text-foreground/50 block mb-6">
+            <span className="section-kicker text-foreground/50 block mb-6">
               The way we choose
             </span>
             <h2 className="font-display text-4xl tracking-tight text-foreground leading-[1.1] mb-12">
@@ -143,7 +143,7 @@ export default function AboutPage() {
                   key={p.number}
                   className="flex items-start gap-6 py-8 border-b border-foreground/10"
                 >
-                  <span className="text-sm font-sans tracking-widest text-foreground/40 shrink-0 pt-1">
+                  <span className="brand-numeral text-sm text-foreground/45 shrink-0 pt-1">
                     {p.number}
                   </span>
                   <div className="flex flex-col gap-2">
@@ -191,13 +191,13 @@ export default function AboutPage() {
           <div className="w-7/12 flex items-center justify-center p-16 xl:p-24 bg-background">
             <div className="max-w-lg w-full flex flex-col space-y-8">
               <div className="space-y-6">
-                <span className="text-xs font-sans tracking-[0.2em] uppercase text-foreground/50 block">
+                <span className="section-kicker text-foreground/50 block">
                   The way we choose
                 </span>
-                <h2 className="font-display text-4xl sm:text-5xl lg:text-[3.5rem] leading-[1.1] tracking-tight text-foreground">
+                <h2 className="font-display text-display-lg leading-tight tracking-display text-foreground">
                   Frames that belong in your day.
                 </h2>
-                <p className="text-lg text-foreground/80 font-sans leading-relaxed">
+                <p className="text-body-lg text-foreground/80 font-sans leading-relaxed">
                   From the first thing you reach for in the morning to the
                   places you go after, eyewear becomes part of the rhythm
                   around you.
@@ -235,13 +235,13 @@ export default function AboutPage() {
           </div>
           <div className="px-4 sm:px-6 py-16 bg-background flex flex-col space-y-8 max-w-2xl">
             <div className="space-y-6">
-              <span className="text-xs font-sans tracking-[0.2em] uppercase text-foreground/50 block">
+              <span className="section-kicker text-foreground/50 block">
                 The way we choose
               </span>
-              <h2 className="font-display text-4xl tracking-tight text-foreground leading-[1.1]">
+              <h2 className="font-display text-display-md tracking-display text-foreground leading-tight">
                 Frames that belong in your day.
               </h2>
-              <p className="text-lg text-foreground/80 font-sans leading-relaxed">
+              <p className="text-body-lg text-foreground/80 font-sans leading-relaxed">
                 From the first thing you reach for in the morning to the places
                 you go after, eyewear becomes part of the rhythm around you.
               </p>

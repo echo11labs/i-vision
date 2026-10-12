@@ -91,19 +91,39 @@ void main() {
 
 export default function HowItWearsEffect({ imageUrl }: { imageUrl: string }) {
   const mountRef = useRef<HTMLDivElement>(null);
-  
+  const [shouldInit, setShouldInit] = React.useState(false);
+
   useEffect(() => {
     if (!mountRef.current) return;
+    const container = mountRef.current;
+
+    // Only initialize WebGL when close to viewport to prevent blocking initial page load
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0]?.isIntersecting) {
+          setShouldInit(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "500px" }
+    );
+
+    observer.observe(container);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!shouldInit || !mountRef.current) return;
     const container = mountRef.current;
     
     // Determine if device uses touch (no hover) for optimizations
     const isTouchDevice = window.matchMedia("(hover: none) and (pointer: coarse)").matches;
-    const iterations = isTouchDevice ? 32 : 80; // Save mobile GPU battery
+    const iterations = isTouchDevice ? 20 : 36; // Optimized for smooth framerates and rich bokeh
     
     // 1. Setup Renderer
-    const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-    // Cap pixel ratio on mobile to prevent excessive fragment shading
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, isTouchDevice ? 1.5 : 2));
+    const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true, powerPreference: "high-performance" });
+    // Cap pixel ratio to prevent GPU hitch
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
     renderer.setSize(container.clientWidth, container.clientHeight, false);
     renderer.domElement.style.position = "absolute";
     renderer.domElement.style.top = "0";
@@ -178,7 +198,7 @@ export default function HowItWearsEffect({ imageUrl }: { imageUrl: string }) {
       startRenderLoop();
       gsap.to(uniforms.uHover, {
         value: 1,
-        duration: 1.5, // Slightly longer luxurious reveal
+        duration: 1.05, // 30% faster (reduced from 1.5s to 1.05s) for a snappier, luxurious clarity reveal
         ease: "power2.out",
         onComplete: stopRenderLoop // Stops CPU usage forever
       });
@@ -233,7 +253,7 @@ export default function HowItWearsEffect({ imageUrl }: { imageUrl: string }) {
         container.removeChild(renderer.domElement);
       }
     };
-  }, [imageUrl]);
+  }, [shouldInit, imageUrl]);
 
   return <div ref={mountRef} className="w-full h-full relative overflow-hidden cursor-crosshair bg-[#1a1a1a]" />;
 }

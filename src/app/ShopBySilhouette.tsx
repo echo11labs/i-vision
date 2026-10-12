@@ -53,13 +53,13 @@ export default function ShopBySilhouette() {
         {/* Header Section */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 lg:mb-16 gap-6">
           <div className="max-w-2xl space-y-4">
-            <h2 className="text-xs font-sans tracking-[0.2em] uppercase text-foreground/50">
+            <h2 className="section-kicker text-foreground/50">
               Find your frame
             </h2>
-            <h3 className="font-display text-5xl sm:text-6xl lg:text-[4rem] tracking-tight text-foreground leading-[1.05]">
+            <h3 className="font-display text-display-lg leading-tight tracking-display text-foreground">
               Start with a shape.
             </h3>
-            <p className="text-xl text-foreground/70 font-sans max-w-lg mt-4">
+            <p className="text-body-lg text-foreground/70 font-sans max-w-lg mt-4">
               Explore rectangular, round, cat-eye, and aviator frames.
             </p>
           </div>
@@ -104,7 +104,7 @@ export default function ShopBySilhouette() {
                   <h3 className="font-display text-4xl text-foreground tracking-tight">
                     {shape.name}
                   </h3>
-                  <span className="text-[10px] font-sans font-medium tracking-widest uppercase text-foreground/40 mt-2">
+                  <span className="brand-numeral text-xs text-foreground/45 mt-2">
                     0{index + 1} — 0{SHAPES.length}
                   </span>
                 </div>
@@ -114,7 +114,7 @@ export default function ShopBySilhouette() {
                 </p>
 
                 <div className="flex items-end justify-between border-b border-foreground/10 pb-4">
-                  <div className="flex gap-2 text-[10px] font-sans tracking-[0.2em] uppercase text-foreground/50">
+                  <div className="flex gap-2 text-micro font-sans tracking-kicker uppercase text-foreground/50">
                     {shape.tags.join(" / ")}
                   </div>
                   <ArrowRight className="h-5 w-5 text-foreground/30 transition-transform duration-500 group-hover:translate-x-2 group-hover:text-accent shrink-0" />

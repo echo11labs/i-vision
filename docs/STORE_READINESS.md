@@ -1,4 +1,4 @@
-# Gravita Store Readiness
+# I-Vision Store Readiness
 
 ## 1. Current website status
 Summarize what is implemented:

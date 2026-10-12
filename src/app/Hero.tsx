@@ -314,7 +314,7 @@ export default function Hero() {
           <div className="flex w-full max-w-3xl flex-col text-background md:text-foreground">
             <div className="relative flex h-9 items-center overflow-hidden md:h-12">
               <span className="inline-flex items-center overflow-hidden border border-foreground bg-background p-1 shadow-sm">
-                <span className="bg-foreground px-2 py-1 font-sans text-[0.6875rem] font-bold uppercase leading-none tracking-[0.08em] text-background md:px-2.5 md:py-1.5 md:text-[0.8125rem]">
+                <span className="bg-foreground px-2 py-1 font-brand text-[0.6875rem] uppercase leading-none tracking-caps text-background md:px-2.5 md:py-1.5 md:text-[0.8125rem]">
                   The
                 </span>
                 <span className="inline-grid px-2 py-1 text-foreground md:px-2.5 md:py-1.5">
@@ -323,7 +323,7 @@ export default function Hero() {
                       key={frame.id}
                       data-frame-name={frame.id}
                       aria-hidden={index === 0 ? undefined : true}
-                      className={`col-start-1 row-start-1 font-sans text-[0.6875rem] font-bold uppercase leading-none tracking-[0.08em] md:text-[0.8125rem] ${index === 0 ? "" : "opacity-0"}`}
+                      className={`col-start-1 row-start-1 font-brand text-[0.6875rem] uppercase leading-none tracking-caps md:text-[0.8125rem] ${index === 0 ? "" : "opacity-0"}`}
                     >
                       {frame.label
                         .split(" ")[1]

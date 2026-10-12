@@ -102,27 +102,27 @@ export default function FindYourFramePage() {
   }, []);
 
   return (
-    <main ref={containerRef} className="bg-[#171917] text-[#F4F1EB]">
+    <main ref={containerRef} className="bg-foreground text-background">
       
       {/* 100vh Hero Section */}
       <section className="relative w-full h-[100svh] flex flex-col items-center justify-center text-center px-6">
         <div className="max-w-4xl mx-auto space-y-8 mt-16">
-          <h1 className="hero-element text-xs sm:text-sm font-sans tracking-[0.2em] uppercase text-[#F4F1EB]/50">
+          <h1 className="hero-element section-kicker text-background/50">
             Find your frame
           </h1>
-          <h2 className="hero-element font-display text-[clamp(3.5rem,7vw,7rem)] tracking-tight text-[#F4F1EB] leading-[1.05]">
+          <h2 className="hero-element font-display text-hero tracking-display text-background leading-tight">
             Start with what<br />feels right.
           </h2>
-          <p className="hero-element text-xl sm:text-2xl text-[#F4F1EB]/70 font-sans max-w-2xl mx-auto leading-relaxed">
+          <p className="hero-element text-body-lg text-background/70 font-sans max-w-2xl mx-auto leading-relaxed">
             A guide to finding clarity in proportion, fit, and style.
           </p>
         </div>
         
         {/* Scroll Indicator */}
         <div className="hero-element absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4">
-          <span className="text-[10px] uppercase tracking-[0.3em] text-[#F4F1EB]/30">Scroll</span>
-          <div className="w-[1px] h-16 bg-[#F4F1EB]/10 overflow-hidden relative">
-            <div className="absolute top-0 left-0 w-full h-1/2 bg-[#F4F1EB]/50 animate-[scroll-down_2s_ease-in-out_infinite]" />
+          <span className="text-micro uppercase tracking-wide text-background/40">Scroll</span>
+          <div className="w-[1px] h-16 bg-background/10 overflow-hidden relative">
+            <div className="absolute top-0 left-0 w-full h-1/2 bg-background/50 animate-[scroll-down_2s_ease-in-out_infinite]" />
           </div>
         </div>
       </section>
@@ -144,7 +144,7 @@ export default function FindYourFramePage() {
               className={`parallax-image object-cover ${step.imagePosition}`}
             />
             {/* Architectural Overlay for Text Legibility (No gradients, pure solid opacity) */}
-            <div className="absolute inset-0 bg-[#171917]/50 mix-blend-multiply" />
+            <div className="absolute inset-0 bg-foreground/50 mix-blend-multiply" />
             <div className="absolute inset-0 bg-black/30" />
           </div>
 
@@ -154,28 +154,28 @@ export default function FindYourFramePage() {
               
               {/* Left Title Area */}
               <div className="lg:col-span-5 flex flex-col justify-end">
-                <span className="text-sm font-sans tracking-[0.2em] uppercase text-[#F4F1EB]/50 mb-6 block">
-                  Step {step.number}
+                <span className="section-kicker text-background/50 mb-6 block">
+                  Step <span className="brand-numeral text-base tracking-caps">{step.number}</span>
                 </span>
-                <h3 className="font-display text-[clamp(3.5rem,5vw,5.5rem)] tracking-tight text-[#F4F1EB] leading-[1.05]">
+                <h3 className="font-display text-display-lg tracking-display text-background leading-tight">
                   {step.title}
                 </h3>
               </div>
 
               {/* Right Content Area */}
               <div className="lg:col-span-6 lg:col-start-7 flex flex-col justify-end space-y-8">
-                <h4 className="font-display text-2xl sm:text-3xl tracking-tight text-[#F4F1EB]">
+                <h4 className="font-display text-display-sm tracking-tight text-background">
                   {step.nextTitle}
                 </h4>
-                <p className="font-sans text-xl sm:text-2xl text-[#F4F1EB]/90 leading-relaxed max-w-xl">
+                <p className="font-sans text-body-lg text-background/85 leading-relaxed max-w-xl">
                   {step.nextText}
                 </p>
                 <div className="pt-4">
                   <Link
                     href="/eyeglasses"
-                    className="group inline-flex items-center text-[#F4F1EB] font-medium tracking-wide transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F4F1EB] focus-visible:ring-offset-2 focus-visible:ring-offset-[#171917]"
+                    className="group inline-flex items-center text-background font-medium tracking-wide transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-background focus-visible:ring-offset-2 focus-visible:ring-offset-foreground"
                   >
-                    <span className="underline underline-offset-4 decoration-[#F4F1EB]/30 group-hover:decoration-[#F4F1EB] transition-colors">
+                    <span className="underline underline-offset-4 decoration-background/30 group-hover:decoration-background transition-colors">
                       Browse all eyeglasses
                     </span>
                     <ArrowRight className="h-4 w-4 ml-2 transition-transform motion-safe:group-hover:translate-x-1" aria-hidden="true" />
