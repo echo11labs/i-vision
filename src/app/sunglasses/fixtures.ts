@@ -46,7 +46,7 @@ export const SUNGLASSES_PRODUCTS: SunglassesProduct[] = [
     lensType: "High-Altitude Polarized UV400",
     measurements: "49 — 21 — 145 mm",
     image: "/images/sunglasses/the-alpinist-frame.jpg",
-    modelImage: "/images/sunglasses/the-alpinist.png",
+    modelImage: "/images/sunglasses/model-the-alpinist.png",
     description:
       "Engineered for high-altitude clarity and intense alpine sunlight. Calibrated circular titanium-wire rims sculpted with an elevated arched bridge and glare-cutting polarized optics.",
     details: [
