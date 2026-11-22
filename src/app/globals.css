@@ -163,25 +163,22 @@
     line-height: var(--leading-snug);
   }
 
-  /* ── Soft Landing Animation for Seamless Route Arrival ── */
-  @keyframes pageSoftLand {
-    0% {
+  /* ── Smooth, Clean Page Fade Transition (Zero Layout Shift) ── */
+  @keyframes pageFadeIn {
+    from {
       opacity: 0;
-      transform: translateY(6px);
     }
-    100% {
+    to {
       opacity: 1;
-      transform: translateY(0);
     }
   }
 
-  .page-soft-land {
-    animation: pageSoftLand 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
-    will-change: opacity, transform;
+  .page-fade-in {
+    animation: pageFadeIn 0.22s ease-out both;
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .page-soft-land {
+    .page-fade-in {
       animation: none;
     }
   }

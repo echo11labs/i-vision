@@ -24,7 +24,7 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL("https://i-vision.studio"),
   title: {
-    default: "I-VISION — Archival Eyewear & Sunglasses",
+    default: "I-VISION — Eyewear & Sunglasses",
     template: "%s | I-VISION",
   },
   description: "Handcrafted optical frames and polarized sunglasses shaped for everyday clarity. Considered forms, Japanese beta-titanium, and cured bio-acetate.",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     "acetate frames",
   ],
   openGraph: {
-    title: "I-VISION — Archival Eyewear & Sunglasses",
+    title: "I-VISION — Eyewear & Sunglasses",
     description: "Handcrafted optical frames and polarized sunglasses shaped for everyday clarity and considered forms.",
     siteName: "I-VISION",
     locale: "en_US",
@@ -50,13 +50,13 @@ export const metadata: Metadata = {
         url: "/images/og-image.jpg",
         width: 1200,
         height: 675,
-        alt: "I-VISION — Archival Eyewear Collection",
+        alt: "I-VISION — Eyewear Collection",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "I-VISION — Archival Eyewear & Sunglasses",
+    title: "I-VISION — Eyewear & Sunglasses",
     description: "Handcrafted optical frames and polarized sunglasses shaped for everyday clarity and considered forms.",
     images: ["/images/og-image.jpg"],
   },

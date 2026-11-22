@@ -16,7 +16,7 @@ export default function EyeglassesShowcase() {
             <div className="flex items-center gap-2">
               <Glasses className="w-4 h-4 text-foreground/50" />
               <h2 className="section-kicker text-foreground/50">
-                Optical Collection — Archival Edition
+                Optical Collection
               </h2>
             </div>
             <h3 className="font-display text-display-lg leading-tight tracking-display text-foreground">

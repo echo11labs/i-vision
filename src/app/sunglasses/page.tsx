@@ -161,7 +161,7 @@ function SunglassesContent() {
             <div className="flex flex-col gap-6 lg:gap-8 lg:col-span-8">
               <div className="flex items-center gap-3">
                 <span className="section-kicker text-background/60">
-                  Sun Collection — Edition 01
+                  Sun Collection
                 </span>
                 <span className="text-background/30 font-light select-none">—</span>
                 <span className="text-[10px] font-sans tracking-[0.2em] uppercase text-background/40">

@@ -64,7 +64,7 @@ export default async function ProductDetailPage({ params, searchParams }: Props)
             </span>
           </Link>
           <span className="text-[11px] font-sans tracking-[0.2em] uppercase text-foreground/45">
-            Archival Optical Study
+            Optical Collection
           </span>
         </div>
 
@@ -94,7 +94,7 @@ export default async function ProductDetailPage({ params, searchParams }: Props)
             <div>
               <div className="mb-8 border-b border-foreground/15 pb-8">
                 <span className="section-kicker text-foreground/50 mb-3 block">
-                  I-Vision Optical Archive
+                  I-Vision Eyeglasses
                 </span>
                 <h1 className="font-display text-hero tracking-display leading-tight mb-4 text-foreground">
                   {product.name}
@@ -208,7 +208,7 @@ export default async function ProductDetailPage({ params, searchParams }: Props)
       <section className="py-20 lg:py-24 px-6 lg:px-12 max-w-[1440px] mx-auto border-t border-foreground/10">
         <div className="flex items-center justify-between mb-12">
           <div>
-            <span className="section-kicker text-foreground/50">Curated Archive</span>
+            <span className="section-kicker text-foreground/50">Related Frames</span>
             <h2 className="font-display text-2xl sm:text-3xl tracking-tight text-foreground mt-2">
               Explore More Optical Frames
             </h2>

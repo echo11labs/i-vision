@@ -222,7 +222,7 @@ function EyeglassesContent() {
             <div className="flex flex-col gap-6 lg:gap-8 lg:col-span-8">
               <div className="flex items-center gap-3">
                 <span className="section-kicker text-foreground/60">
-                  Optical Collection — Edition 01
+                  Optical Collection
                 </span>
                 <span className="text-foreground/30 font-light select-none">—</span>
                 <span className="text-[10px] font-sans tracking-[0.2em] uppercase text-foreground/50">
@@ -257,11 +257,8 @@ function EyeglassesContent() {
               </div>
             </div>
 
+            {/* Quick highlights */}
             <div className="hidden lg:flex flex-col gap-4 lg:col-span-4 border-l border-foreground/15 pl-8 pb-2">
-              <div className="flex items-center gap-3 text-foreground/80">
-                <Glasses className="w-4 h-4 text-accent shrink-0" />
-                <span className="text-xs font-sans tracking-wide">Digital Free-Form Prescription Ready</span>
-              </div>
               <div className="flex items-center gap-3 text-foreground/80">
                 <ShieldCheck className="w-4 h-4 text-accent shrink-0" />
                 <span className="text-xs font-sans tracking-wide">Seven-Barrel Precision Hinges</span>

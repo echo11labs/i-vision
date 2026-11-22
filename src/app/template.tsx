@@ -5,7 +5,7 @@ export default function Template({ children }: { children: ReactNode }) {
   return (
     <>
       <ScrollReset />
-      <div className="flex-grow flex flex-col page-soft-land">
+      <div className="flex-grow flex flex-col page-fade-in">
         {children}
       </div>
     </>

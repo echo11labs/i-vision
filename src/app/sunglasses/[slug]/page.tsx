@@ -96,7 +96,7 @@ export default async function SunglassesDetailPage({
             <div>
               <div className="mb-8 border-b border-foreground/15 pb-8">
                 <span className="section-kicker text-foreground/50 mb-3 block">
-                  I-Vision Sun Edition 01
+                  I-Vision Sunglasses
                 </span>
                 <h1 className="font-display text-hero tracking-display leading-tight mb-4 text-foreground">
                   {product.name}

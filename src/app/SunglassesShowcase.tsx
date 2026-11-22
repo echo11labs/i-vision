@@ -16,7 +16,7 @@ export default function SunglassesShowcase() {
             <div className="flex items-center gap-2.5">
               <Sun className="w-4 h-4 text-accent" />
               <span className="section-kicker text-background/60">
-                Sun Collection — Edition 01
+                Sun Collection
               </span>
             </div>
             <h2 className="font-display text-hero tracking-display leading-tight text-background">

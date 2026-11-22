@@ -55,7 +55,7 @@ export default function MotionMain({ children }: MotionMainProps) {
     };
   }, []);
 
-  // Immediately scroll to top on every route change
+  // Scroll to top on route change
   useEffect(() => {
     if (lenisRef.current) {
       lenisRef.current.scrollTo(0, { immediate: true });

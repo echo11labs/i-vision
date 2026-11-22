@@ -1,64 +1,31 @@
-# I-VISION
+# Ivision
 
-> *See things differently.*
+**See things differently.**
 
----
+Ivision is an eyewear brand shaped by considered design, individual expression, and everyday clarity. Its visual identity brings architectural frame shapes together with warm, understated art direction, letting the eyewear and the people who wear it take centre stage.
 
-## Overview
+## The collections
 
-**I-VISION** is an independent eyewear atelier dedicated to architectural forms, material permanence, and everyday optical clarity. Rooted in mid-century restraint and contemporary precision, each piece is engineered as a physical extension of the wearer—balancing sculptural presence with weightless comfort.
+### Eyeglasses
 
-From Japanese beta-titanium rimwires to eight-millimeter hand-beveled Italian cellulose acetate, I-VISION creates frames designed not for fleeting seasons, but for enduring personal character.
+Optical frames with a distinct point of view. From the clean lines of **The Architect** to the circular profile of **The Academic**, the expressive cat-eye of **The Editor**, and the classic aviator of **The Pilot**, the collection explores familiar silhouettes through a contemporary lens.
 
----
+**The Modernist** and **The Artisan** round out the collection with restrained geometry and softer heritage forms.
 
-## The Collections
+### Sunglasses
 
-### Optical Collection &mdash; Archival Eyeglasses
-A curated suite of optical silhouettes crafted for cerebral immersion, prolonged studio hours, and refined everyday presence:
-- **The Architect** &mdash; Balanced rectangular geometry grounded in modernist proportion, featuring guilloché-engraved titanium core wires and custom bevel-cut temples.
-- **The Academic** &mdash; A timeless pantoscopic circular profile rendered in featherweight beta-titanium with micro-pivoting anatomical nose pads.
-- **The Editor** &mdash; An upswept architectural cat-eye silhouette in multi-laminated midnight acetate, sculpted to accentuate high cheekbones.
-- **The Pilot** &mdash; An archival double-bridge teardrop aviator re-engineered with satin 24k gold luster and state-of-the-art structural rigidity.
-- **The Modernist** &mdash; Clean horizontal contours with chamfered inner facets in organic amber ash bio-acetate.
-- **The Artisan** &mdash; A heritage panto silhouette with a sculpted keyhole bridge, hand-polished with organic beeswax and volcanic pumice.
+Shapes for brighter days and changing perspectives. **The Alpinist**, **The Pilot Sun**, **The Riviera**, **The Solstice**, **The Siren**, **The Vanguard**, and **The Monolith** move between circular, aviator, cat-eye, navigator, and bold acetate silhouettes.
 
-### Solar Collection &mdash; Sunframes
-Sculptural silhouettes calibrated for daylight clarity, high-altitude exposure, and coastal horizons:
-- **The Alpinist** &mdash; High-altitude circular titanium frames with elevated bridge architecture and Category 3 glacier polarized filters.
-- **The Pilot Sun** &mdash; Aerospace beta-titanium aviator with calibrated double-bridge geometry and precision smoke gradient lenses.
-- **The Riviera** &mdash; Substantial hand-beveled acetate with warm bronze polarizing optics tailored for ocean light.
-- **The Solstice** &mdash; Coin-edge circular stainless steel fitted with vintage emerald mineral glass lenses.
-- **The Siren** &mdash; Sharply beveled geometric cat-eye with midnight black UV400 filters.
-- **The Vanguard** &mdash; Linear champagne gold navigator frame featuring sepia gradient lenses calibrated for golden hour light.
-- **The Monolith** &mdash; Flat-top translucent smoke acetate silhouette balancing monumental heft with transparent lightness.
+## Brand design
+
+The Ivision identity balances bold lettering with elegant editorial typography. A warm neutral palette, generous space, and close-up imagery draw attention to each frame’s shape, texture, and character.
+
+The brand experience carries that approach through collection stories, frame details, and a guide to finding complementary shapes. Motion reveals the eyewear at a measured pace, giving each silhouette room to be seen.
+
+## Our perspective
+
+Eyewear is part of how we see the world—and how we choose to show up in it. Ivision celebrates frames with character: considered enough for everyday wear and distinctive enough to feel personal.
 
 ---
 
-## Atelier Standards & Materials
-
-Every frame in the collection adheres to exacting architectural criteria:
-
-- **Japanese Beta-Titanium**: High-tensile, hypoallergenic, and ultra-flexible alloy providing maximum strength at microscopic gauge widths.
-- **Cured Cellulose Bio-Acetate**: Aged for three months to eliminate internal tension before being precision-milled and hand-buffed to a deep luster.
-- **Engineered Hinge Assemblies**: Custom multi-barrel German hinges with lock-tight pins rated for decades of friction-free actuation.
-- **Free-Form & Polarized Optics**: Multi-coated anti-reflective backings, oleophobic smear resistance, and 100% UVA/UVB barrier protection.
-
----
-
-## The Digital Atelier
-
-The online flagship mirrors the sensory precision of an intimate eyewear salon:
-
-- **Bespoke Typographic System**: The custom *Boxing* brand identity paired with editorial *Playfair Display* serifs and high-legibility grotesque typography.
-- **Anchored Silhouette Exploration**: Seamless sub-nav navigation allowing visitors to filter by geometric shape without losing their spatial orientation.
-- **Interactive Frame Consultation**: A curated facial-geometry guide assisting clients in discovering their complementary frame proportions.
-- **Optical Loupe Specimen**: An interactive lens-defocus 404 experience where visitors utilize an optical loupe to bring unmapped coordinates into razor-sharp focal clarity.
-
----
-
-## Colophon
-
-- **House**: I-VISION
-- **Art Direction & Engineering**: [Echo11 Labs](https://echo11.tech)
-- **Copyright**: &copy; 2026 I-VISION. All rights reserved.
+Brand design and art direction by [Echo11 Labs](https://echo11.tech).
